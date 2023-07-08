@@ -826,7 +826,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content myModalR">
             <div class="d-flex justify-content-between px-3 align-items-center">
-              <h4 class="modalTitle mt-4" id="myModalLabel">Add Restaurant</h4>
+              <h4 class="modalTitle mt-4" id="myModalLabel">Add Coupon</h4>
               <button
                 type="button"
                 class="close"
@@ -847,78 +847,250 @@
                   placeholder="Enter name"
                 />
               </div>
-              <div class="form-group">
-                <label class="ft2" for="location">Location:</label>
-                <input
-                  type="text"
-                  class="form-control mInput"
-                  id="location"
-                  placeholder="Enter location"
-                />
+              <div>
+                <button class="btn sentBtn">Generate code</button>
               </div>
               <div class="form-group">
-                <label class="ft2" for="global-menu">Global Menu:</label>
-                <input
-                  type="text"
+                <label for="exampleTextarea" class="ft2">Description</label>
+                <textarea
                   class="form-control mInput"
-                  id="global-menu"
-                  placeholder="Enter global menu"
-                />
+                  id="exampleTextarea"
+                  rows="4"
+                ></textarea>
               </div>
-              <div class="my-2 dragSec">
-                <p class="ft6">Upload a restaurant picture/logo</p>
-                <div class="borderDotted d-flex justify-content-center">
+              <div class="my-2">
+                <ul
+                  class="nav nav-tabs d-flex justify-content-between"
+                  id="myTabs"
+                  role="tablist"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="home-tab"
+                      data-toggle="tab"
+                      href="#home"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                      >General</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >Usage restriction</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="contact-tab"
+                      data-toggle="tab"
+                      href="#contact"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                      >Usage limits</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
                   <div
-                    class="dragAndDrop d-flex flex-column justify-content-center"
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
                   >
-                    <div class="d-flex justify-content-center">
-                      <img
-                        class=""
-                        src="./assets/images/upicon.png"
-                        alt=""
-                        width="35px"
+                    <div class="form-group w-100 mx-2">
+                      <label class="ft2" for="role">Discount type</label>
+                      <select class="form-control mInput w-100" id="role">
+                        <option value="admin">Admin</option>
+                        <option value="manager">Manager</option>
+                        <option value="employee">Employee</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="ft2" for="global-menu">Coupon amount</label>
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="Enter global menu"
                       />
                     </div>
-                    <p class="ft4">
-                      Drag image here or <span class="cop">upload</span>
-                    </p>
-                    <p>Image must be 1200x600, PNG or JPEG</p>
+                    <div class="form-group">
+                      <label class="ft2" for="global-menu"
+                        >Coupon expiry date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="Enter global menu"
+                      />
+                    </div>
+                    <div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="checkbox1"
+                        />
+                        <label class="custom-control-label" for="checkbox1"
+                          >Check this box to allow free shipping</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">Minimum Speed</label>
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">Maximum Speed</label>
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="checkbox1"
+                      />
+                      <label class="custom-control-label" for="checkbox1"
+                        >Check this box if this coupon cannot be used in
+                        conjunction with other coupons</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="checkbox1"
+                      />
+                      <label class="custom-control-label" for="checkbox1"
+                        >Check this box if coupon should not apply to items on
+                        sale</label
+                      >
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">Products</label>
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="search for products"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu"
+                        >Exclude Products</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="search for products"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu"></label>
+                        Product Catagories</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="Any Catagories"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">
+                        Exclude Catagories</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="No Catagories"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu"></label>
+                        Product brand</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="Any Catagories"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">
+                        Exclude brands</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="No Catagories"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                  <div class="form-group my-2">
+                    <label class="ft2" for="global-menu"></label>
+                      Usage per limit coupon</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control mInput"
+                      id="global-menu"
+                      placeholder="Unlimited"
+                    />
+                  </div>
+                  <div class="form-group my-2">
+                    <label class="ft2" for="global-menu">
+                      Usage per limit user</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control mInput"
+                      id="global-menu"
+                      placeholder="Unlimited"
+                    />
+                  </div>
                   </div>
                 </div>
               </div>
-              <p class="my-2">Add Employee</p>
-              <div class="form-group">
-                <label class="ft2" for="empname">Employee Name:</label>
-                <input
-                  type="text"
-                  class="form-control mInput"
-                  id="empname"
-                  placeholder="Enter employee name"
-                />
-              </div>
-              <div class="my-2 d-flex">
-                <div class="form-group w-100 mx-2">
-                  <label class="ft2" for="email">Email:</label>
-                  <input
-                    type="email"
-                    class="form-control mInput w-100"
-                    id="email"
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div class="form-group w-100 mx-2">
-                  <label class="ft2" for="role">Role:</label>
-                  <select class="form-control mInput w-100" id="role">
-                    <option value="admin">Admin</option>
-                    <option value="manager">Manager</option>
-                    <option value="employee">Employee</option>
-                  </select>
-                </div>
-              </div>
-              <button class="btn sentBtn">
-                Sent invite
-                <img src="./assets/images/send.png" alt="" width="20px" />
-              </button>
             </div>
             <div class="modelbtns d-flex justify-content-center my-3">
               <div class="">
@@ -929,8 +1101,8 @@
                 >
                   Cancel
                 </button>
-                <button type="button" class="btn modelbtn2 px-4 py-2 mx-2">
-                  Add Restaurant
+                <button type="button" class="btn modelbtn2 px-5 py-2 mx-2">
+                  Save
                 </button>
               </div>
             </div>

@@ -640,62 +640,76 @@ form.user .form-control-user {
 .custom-control-input:checked~.custom-control-label::before {
     background-color: #E16FA8 !important;
 }
-.dropdownbtns{
+
+.dropdownbtns {
     border-radius: 8px !important;
-border: 1px solid #DBDBDB !important;
-background: #FFF !important;
- border: none !important;
+    border: 1px solid #DBDBDB !important;
+    background: #FFF !important;
+    border: none !important;
 }
+
 .table-striped tbody tr:nth-of-type(even) {
-    background-color: #ffffff !important; /* Set the color for even rows */
-  }
- .play{
+    background-color: #ffffff !important;
+    /* Set the color for even rows */
+}
+
+.play {
     color: #FFF !important;
-/* text-align: center; */
-font-family: Manrope !important;
-border-radius: 8px !important;
-background: #E16FA8 !important;
- }
- .ticbtnone{
-    border:none !important;
+    /* text-align: center; */
+    font-family: Manrope !important;
+    border-radius: 8px !important;
+    background: #E16FA8 !important;
+}
+
+.ticbtnone {
+    border: none !important;
     /* width: 40px !important; */
-    columns: #767676 !important; 
- }
- .btn2{
+    columns: #767676 !important;
+}
+
+.btn2 {
     color: white !important;
     border-radius: 8px !important;
-background: #E16FA8 !important;
- }
- .tablefooter{
-    background: #E3D9CE !important;
- }
+    background: #E16FA8 !important;
+}
 
- /* order two page css  --------------------*/
- .table tbody tr:last-child {
-    height: 200px !important; /* Set the desired height for the last row */
-    /* display: flex; */
- 
-    align-items: flex-end !important;
- 
-  }
-  .total{
+.tablefooter {
     background: #E3D9CE !important;
-  }
-  .delivery{
+}
+
+/* order two page css  --------------------*/
+.table tbody tr:last-child {
+    height: 200px !important;
+    /* Set the desired height for the last row */
+    /* display: flex; */
+
+    align-items: flex-end !important;
+
+}
+
+.total {
+    background: #E3D9CE !important;
+}
+
+.delivery {
     background: #F5F6F6 !important;
-  }
-  .detail{color: var(--fill-dark-main-dark, #2E2C34) !important;
-  font-family: Manrope !important;
-  font-size: 24px !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  line-height: 48px !important;
-  }
-  .callicon{
+}
+
+.detail {
+    color: var(--fill-dark-main-dark, #2E2C34) !important;
+    font-family: Manrope !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 48px !important;
+}
+
+.callicon {
     height: 22px !important;
     width: 20px !important;
-  }
-  .paracol{
+}
+
+.paracol {
     color: var(--text-dark, #252723) !important;
     font-family: Manrope !important;
     font-size: 14px !important;
@@ -703,15 +717,22 @@ background: #E16FA8 !important;
     font-weight: 600 !important;
     /* border-bottom: 1px solid black; */
     /* line-height: 48px; */
-  }
-  .divborder{
-    border-bottom:1px solid #F2F2F1;
-  }
-  
-  .table-striped tbody tr:nth-of-type(even) {
-      background-color: rgba(0,0,0,.05) !important;
-  }
-   
-  .table-striped tbody tr:nth-of-type(odd) {
+}
+
+.divborder {
+    border-bottom: 1px solid #F2F2F1;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, .05) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
     background-color: #fff !important;
+}
+
+/* my css  */
+.nav-tabs .nav-link.active {
+    border-color: transparent;
+    border-bottom-color: #E16FA8;
 }
