@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="./assets/css/admin.css" />
     <link href="./assets/css/style.css" rel="stylesheet" />
 
-       <link rel="stylesheet" href="./assets/css/table.css" />
+    <link rel="stylesheet" href="./assets/css/table.css" />
+
     <link rel="stylesheet" href="./assets/css/drive.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -70,7 +72,7 @@
         </li>
 
         <!-- Nav Item - Pages Collapse Menu -->
-       <li class="nav-item ml-4">
+        <li class="nav-item ml-4">
           <a
             class="nav-link collapsed"
             href="#"
@@ -97,7 +99,6 @@
           </div>
         </li>
 
-
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item ml-4">
           <a
@@ -113,7 +114,7 @@
           </a>
         </li>
 
-       <!-- Nav Item - Pages Collapse Menu -->
+        <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
           <a class="nav-link collapsed" href="./Restaurant.html">
             <span
@@ -174,29 +175,9 @@
             <span class="sbfont"> Coupons and loyality</span>
           </a>
         </li>
-          <div
-            id="subCategoryNav"
-            class="collapse"
-            aria-labelledby="headingTwo"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <a
-                class="collapse-item"
-                href="https://techrepublica.com/playground/auth/sub-category"
-                >All</a
-              >
-              <a
-                class="collapse-item"
-                href="https://techrepublica.com/playground/auth/sub-category/create"
-                >Add</a
-              >
-            </div>
-          </div>
-        </li>
 
         <!-- Nav Item - Pages Collapse Menu -->
-          <li class="nav-item">
+        <li class="nav-item">
           <a
             class="nav-link collapsed"
             href="./faremanagenent.html"
@@ -274,11 +255,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="./stockmanagement.html"
-           
-          >
+          <a class="nav-link collapsed" href="./stockmanagement.html">
             <span
               ><svg
                 width="18"
@@ -298,7 +275,6 @@
             </span>
             <span class="sbfont"> Stock Management</span>
           </a>
-         
         </li>
         <li class="nav-item">
           <a
@@ -721,155 +697,84 @@
           </div>
 
           <!-- Begin Page Content -->
-          <div class="container-fluid mt-0">
-            <!-- Page Heading -->
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="text-dark">Restaurants</h1>
-              <button
-                class="btn addButn"
-                data-toggle="modal"
-                data-target="#myModal"
-              >
-                <img
-                  src="./assets/images/Plus2.png"
-                  alt=""
-                  width="30px"
-                  height="30px"
-                />
-                Add restaurant
-              </button>
+             <!-- Content Row -->
+             <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-9 rounded rounded-3 my-2">
+                        <div id="mapContainer" style="height: 400px ; border-radius: 16px;
+                        background: #FAFAFA;"></div>
+                    </div>
+                    <style>
+                        .font_setting {
+                            font-weight: 700 !important;
+                            color: black !important;
+                        }
+                    </style>
+                    <div class="col-md-3 my-2 rounded">
+                        <table class="table table-striped bgWhiteBox">
+                            <thead>
+                              <tr>
+                                <th>Regin Name</th>
+                                <th>Fare</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                               
+                                <td><p class="tabFont">medison Square</p></td>
+                                <td><p class="tabFont">$12.60</p></td>
+                              
+                              </tr>
+                              <tr>
+                               
+                                <td><p class="tabFont">medison Square</p></td>
+                                <td><p class="tabFont">$12.60</p></td>
+                              
+                              </tr>
+                              <tr>
+                               
+                                <td><p class="tabFont">medison Square</p></td>
+                                <td><p class="tabFont">$12.60</p></td>
+                              
+                              </tr>
+                              <tr>
+                               
+                                <td><p class="tabFont">medison Square</p></td>
+                                <td><p class="tabFont">$12.60</p></td>
+                              
+                              </tr>
+                              <tr>
+                               
+                                <td><p class="tabFont">medison Square</p></td>
+                                <td><p class="tabFont">$12.60</p></td>
+                              
+                              </tr>
+                              <tr>
+                               
+                                <td><p class="tabFont">medison Square</p></td>
+                                <td><p class="tabFont">$12.60</p></td>
+                              
+                              </tr>
+                            
+                              <!-- Add more rows as needed -->
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
             </div>
+        </div>
+        </div>
+    </div>
 
-            <!-- Content Row -->
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-3 my-2">
-                  <div class="card p-2 cardtest">
-                    <div class="d-flex justify-content-between">
-                      <img
-                        src="./assets/images/pizzde.png"
-                        alt=""
-                        width="100px"
-                      />
-                      <button class="btn dbtn">
-                        <img src="./assets/images/dots.png" alt="" />
-                      </button>
-                    </div>
-                    <div class="my-2">
-                      <h5 class="tDark">New Yorker Pizza</h5>
-                      <p class="td3">Pizzas, burgers and salads.</p>
-                      <div class="my-2 d-flex">
-                        <img
-                          class="mx-2"
-                          src="./assets/images/location2.png"
-                          alt=""
-                          width="30px"
-                          height="30px"
-                        />
-                        <p class="td2">
-                          2972 Westheimer Rd. Santa Ana, Illinois 85486
-                        </p>
-                      </div>
-                      <div class="my-2 d-flex">
-                        <img
-                          class="mx-2"
-                          src="./assets/images/people.png"
-                          alt=""
-                          width="30px"
-                          height="30px"
-                        />
-                        <p>23</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 my-2">
-                  <div class="card p-2 cardtest">
-                    <div class="d-flex justify-content-between">
-                      <img
-                        src="./assets/images/funky.png"
-                        alt=""
-                        width="120px"
-                        height="100px"
-                      />
-                      <button class="btn dbtn">
-                        <img src="./assets/images/dots.png" alt="" />
-                      </button>
-                    </div>
-                    <div class="my-2">
-                      <h5 class="tDark">Funky Pizza</h5>
-                      <p class="td3">Pizzas, burgers and salads.</p>
-                      <div class="my-2 d-flex">
-                        <img
-                          class="mx-2"
-                          src="./assets/images/location2.png"
-                          alt=""
-                          width="30px"
-                          height="30px"
-                        />
-                        <p class="td2">
-                          2972 Westheimer Rd. Santa Ana, Illinois 85486
-                        </p>
-                      </div>
-                      <div class="my-2 d-flex">
-                        <img
-                          class="mx-2"
-                          src="./assets/images/people.png"
-                          alt=""
-                          width="30px"
-                          height="30px"
-                        />
-                        <p>23</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 my-2">
-                  <div class="card p-2 cardtest">
-                    <div class="d-flex justify-content-between">
-                      <img
-                        src="./assets/images/Żarwok_logo-color.png"
-                        alt=""
-                        width="120px"
-                        height="100px"
-                      />
-                      <button class="btn dbtn">
-                        <img src="./assets/images/dots.png" alt="" />
-                      </button>
-                    </div>
-                    <div class="my-2">
-                      <h5 class="tDark">Zarwok</h5>
-                      <p class="td3">Pizzas, burgers and salads.</p>
-                      <div class="my-2 d-flex">
-                        <img
-                          class="mx-2"
-                          src="./assets/images/location2.png"
-                          alt=""
-                          width="30px"
-                          height="30px"
-                        />
-                        <p class="td2">
-                          2972 Westheimer Rd. Santa Ana, Illinois 85486
-                        </p>
-                      </div>
-                      <div class="my-2 d-flex">
-                        <img
-                          class="mx-2"
-                          src="./assets/images/people.png"
-                          alt=""
-                          width="30px"
-                          height="30px"
-                        />
-                        <p>23</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+</div>
+
         </div>
       </div>
       <!-- Modal -->
@@ -883,7 +788,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content myModalR">
             <div class="d-flex justify-content-between px-3 align-items-center">
-              <h4 class="modalTitle mt-4" id="myModalLabel">Add Restaurant</h4>
+              <h4 class="modalTitle mt-4" id="myModalLabel">Add Coupon</h4>
               <button
                 type="button"
                 class="close"
@@ -904,78 +809,250 @@
                   placeholder="Enter name"
                 />
               </div>
-              <div class="form-group">
-                <label class="ft2" for="location">Location:</label>
-                <input
-                  type="text"
-                  class="form-control mInput"
-                  id="location"
-                  placeholder="Enter location"
-                />
+              <div>
+                <button class="btn sentBtn">Generate code</button>
               </div>
               <div class="form-group">
-                <label class="ft2" for="global-menu">Global Menu:</label>
-                <input
-                  type="text"
+                <label for="exampleTextarea" class="ft2">Description</label>
+                <textarea
                   class="form-control mInput"
-                  id="global-menu"
-                  placeholder="Enter global menu"
-                />
+                  id="exampleTextarea"
+                  rows="4"
+                ></textarea>
               </div>
-              <div class="my-2 dragSec">
-                <p class="ft6">Upload a restaurant picture/logo</p>
-                <div class="borderDotted d-flex justify-content-center">
+              <div class="my-2">
+                <ul
+                  class="nav nav-tabs d-flex justify-content-between"
+                  id="myTabs"
+                  role="tablist"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="home-tab"
+                      data-toggle="tab"
+                      href="#home"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                      >General</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >Usage restriction</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="contact-tab"
+                      data-toggle="tab"
+                      href="#contact"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                      >Usage limits</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
                   <div
-                    class="dragAndDrop d-flex flex-column justify-content-center"
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
                   >
-                    <div class="d-flex justify-content-center">
-                      <img
-                        class=""
-                        src="./assets/images/upicon.png"
-                        alt=""
-                        width="35px"
+                    <div class="form-group w-100 mx-2">
+                      <label class="ft2" for="role">Discount type</label>
+                      <select class="form-control mInput w-100" id="role">
+                        <option value="admin">Admin</option>
+                        <option value="manager">Manager</option>
+                        <option value="employee">Employee</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="ft2" for="global-menu">Coupon amount</label>
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="Enter global menu"
                       />
                     </div>
-                    <p class="ft4">
-                      Drag image here or <span class="cop">upload</span>
-                    </p>
-                    <p>Image must be 1200x600, PNG or JPEG</p>
+                    <div class="form-group">
+                      <label class="ft2" for="global-menu"
+                        >Coupon expiry date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="Enter global menu"
+                      />
+                    </div>
+                    <div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="checkbox1"
+                        />
+                        <label class="custom-control-label" for="checkbox1"
+                          >Check this box to allow free shipping</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">Minimum Speed</label>
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">Maximum Speed</label>
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="checkbox1"
+                      />
+                      <label class="custom-control-label" for="checkbox1"
+                        >Check this box if this coupon cannot be used in
+                        conjunction with other coupons</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="checkbox1"
+                      />
+                      <label class="custom-control-label" for="checkbox1"
+                        >Check this box if coupon should not apply to items on
+                        sale</label
+                      >
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">Products</label>
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="search for products"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu"
+                        >Exclude Products</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="search for products"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu"></label>
+                        Product Catagories</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="Any Catagories"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">
+                        Exclude Catagories</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="No Catagories"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu"></label>
+                        Product brand</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="Any Catagories"
+                      />
+                    </div>
+                    <div class="form-group my-2">
+                      <label class="ft2" for="global-menu">
+                        Exclude brands</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mInput"
+                        id="global-menu"
+                        placeholder="No Catagories"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                  <div class="form-group my-2">
+                    <label class="ft2" for="global-menu"></label>
+                      Usage per limit coupon</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control mInput"
+                      id="global-menu"
+                      placeholder="Unlimited"
+                    />
+                  </div>
+                  <div class="form-group my-2">
+                    <label class="ft2" for="global-menu">
+                      Usage per limit user</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control mInput"
+                      id="global-menu"
+                      placeholder="Unlimited"
+                    />
+                  </div>
                   </div>
                 </div>
               </div>
-              <p class="my-2">Add Employee</p>
-              <div class="form-group">
-                <label class="ft2" for="empname">Employee Name:</label>
-                <input
-                  type="text"
-                  class="form-control mInput"
-                  id="empname"
-                  placeholder="Enter employee name"
-                />
-              </div>
-              <div class="my-2 d-flex">
-                <div class="form-group w-100 mx-2">
-                  <label class="ft2" for="email">Email:</label>
-                  <input
-                    type="email"
-                    class="form-control mInput w-100"
-                    id="email"
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div class="form-group w-100 mx-2">
-                  <label class="ft2" for="role">Role:</label>
-                  <select class="form-control mInput w-100" id="role">
-                    <option value="admin">Admin</option>
-                    <option value="manager">Manager</option>
-                    <option value="employee">Employee</option>
-                  </select>
-                </div>
-              </div>
-              <button class="btn sentBtn">
-                Sent invite
-                <img src="./assets/images/send.png" alt="" width="20px" />
-              </button>
             </div>
             <div class="modelbtns d-flex justify-content-center my-3">
               <div class="">
@@ -986,8 +1063,8 @@
                 >
                   Cancel
                 </button>
-                <button type="button" class="btn modelbtn2 px-4 py-2 mx-2">
-                  Add Restaurant
+                <button type="button" class="btn modelbtn2 px-5 py-2 mx-2">
+                  Save
                 </button>
               </div>
             </div>
@@ -1000,7 +1077,69 @@
         <i class="fas fa-angle-up"></i>
       </a>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.1/leaflet.markercluster.js"></script>
+    <script>
+        // Create a map instance and set its center and zoom level
+        var map = L.map("mapContainer").setView([43.27641, 45.91101], 9); // Adjust the center and zoom level according to your needs
 
+        // Create a tile layer with the map data source
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Define the coordinates for your polygons
+        var polygonCoords = [
+            [44.47778, 43.27641],
+            [44.48562, 46.80302],
+            [42.30666, 47.52812],
+            [42.26602, 43.16654]
+        ];
+        var polygonCoords2 = [
+            [43.87102, 43.43021],
+            [43.89477, 43.91361],
+            [43.87102, 44.47392],
+            [43.19401, 44.53983],
+            [42.97737, 43.83671],
+            [43.24205, 43.3643]
+        ];
+
+        // Create polygons and add them to the map
+        var polygon1 = L.polygon(polygonCoords, {
+            color: 'blue'
+        }).addTo(map);
+        var polygon2 = L.polygon(polygonCoords2, {
+            color: 'red'
+        }).addTo(map);
+
+        // Create a marker cluster group
+        var markers = L.markerClusterGroup();
+
+        // Add markers for each point
+        var markerOptions = {
+            radius: 5,
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 1
+        };
+
+        polygonCoords.forEach(function(coord) {
+            var marker = L.marker(coord, markerOptions);
+            markers.addLayer(marker);
+        });
+        polygonCoords2.forEach(function(coord) {
+            var marker = L.marker(coord, markerOptions);
+            markers.addLayer(marker);
+        });
+
+        // Add the marker cluster group to the map
+        map.addLayer(markers);
+
+        // Fit the map bounds to the polygons and markers
+        var group = new L.featureGroup([polygon1, polygon2, markers]);
+        map.fitBounds(group.getBounds());
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="https://techrepublica.com/playground/dashboard/vendor/jquery/jquery.min.js"></script>
     <script src="https://techrepublica.com/playground/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
