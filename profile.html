@@ -695,7 +695,11 @@
           <!-- Begin Page Content -->
           <div class="container-fluid mt-0 pt-2 py-5">
             <div class="row">
-              <div class="col-md-2"></div>
+              <div class="col-md-2">
+                <div class="mt-5 pt-5">
+                  <p class="fontEdit mt-5 pt-5">Edit Profile</p>
+                </div>
+              </div>
               <div class="col-md-8">
                 <div class="d-flex align-items-center">
                   <div class="peofileImage position-relative">
@@ -710,6 +714,7 @@
                 <div class="my-3">
                   <div class="row">
                     <div class="col-md-6 my-2">
+                      <small class="my-3 text-muted">Personal</small>
                       <div class="my-2 d-flex justify-content-between">
                         <div class="mx-1">
                           <label class="prLabel" for="form-label"
@@ -724,6 +729,85 @@
                           <input class="form-control prInp" type="text" />
                         </div>
                       </div>
+                      <div class="my-2">
+                        <label class="prLabel" for="form-label">Vat#</label>
+                        <input
+                          class="form-control prInp"
+                          type="text"
+                          placeholder="Enter Value"
+                        />
+                      </div>
+                      <div class="my-2">
+                        <label class="prLabel" for="form-label"
+                          >Date of birth</label
+                        >
+                        <input
+                          class="form-control prInp"
+                          type="text"
+                          placeholder="Enter Value"
+                        />
+                      </div>
+                      <div class="my-2">
+                        <label class="prLabel" for="form-label">Role</label>
+                        <select class="form-control" id="exampleSelect">
+                          <option value="">Admin</option>
+                          <option value="option1">Option 1</option>
+                          <option value="option2">Option 2</option>
+                          <option value="option3">Option 3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                      <small class="my-3 text-muted">Contact</small>
+                      <div class="my-2">
+                        <div class="">
+                          <label class="prLabel" for="form-label">Email</label>
+                          <input
+                            class="form-control prInp"
+                            type="text"
+                            placeholder="admin@gmail.com"
+                          />
+                        </div>
+                      </div>
+                      <div class="my-2">
+                        <label for="exampleInput">Phone Number</label>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <select class="form-control" id="exampleSelect">
+                              <option value="">+98</option>
+                              <option value="option1">Option 1</option>
+                              <option value="option2">Option 2</option>
+                              <option value="option3">Option 3</option>
+                            </select>
+                          </div>
+                          <div class="col-md-8">
+                            <input
+                              class="form-control prInp"
+                              type="text"
+                              placeholder="912000000"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my-2">
+                        <label class="prLabel" for="form-label">Country</label>
+                        <input
+                          class="form-control prInp"
+                          type="text"
+                          placeholder="Enter Value"
+                        />
+                      </div>
+                      <div class="my-2">
+                        <label class="prLabel" for="form-label">City</label>
+                        <input
+                          class="form-control prInp"
+                          type="text"
+                          placeholder="Enter Value"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button class="addButn btn px-5">Save</button>
                     </div>
                   </div>
                 </div>
