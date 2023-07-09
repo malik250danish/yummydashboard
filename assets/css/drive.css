@@ -742,3 +742,164 @@ form.user .form-control-user {
     background: #FFF;
     box-shadow: 0px 23px 44px 0px rgba(176, 183, 195, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
+
+.accordion-content {
+    display: none;
+}
+
+.tableArea {
+    border: 8px solid #EEEEEE
+}
+
+.roundTable {
+    background: #B4ADAD;
+    border-radius: 50%;
+    aspect-ratio: 1s;
+    height: 100px;
+    width: 100px;
+    color: #FFF;
+    /* text-align: center; */
+    font-family: Manrope;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 48px;
+}
+
+.tableN {
+    position: relative;
+    top: 26px;
+    left: 40px;
+    right: 0;
+    bottom: 0;
+    color: #FFF;
+    /* text-align: center; */
+    font-family: Manrope;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 800;
+    /* line-height: 4x; */
+}
+
+.roundTableGreen {
+    background: #40B95F;
+    border-radius: 50%;
+    aspect-ratio: 1s;
+    height: 100px;
+    width: 100px;
+
+}
+
+
+.timeTable {
+    color: #FFF;
+    text-align: center;
+    /* leading-trim: both;
+    text-edge: cap; */
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    /* line-height: 48px; */
+    border-radius: 49px;
+    background: #481217;
+    width: fit-content;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: absolute;
+    bottom: -30px;
+    left: 25px
+}
+
+.rectTable {
+
+    border-radius: 14px;
+    background: #B4ADAD;
+    width: 110px;
+    height: 193px;
+    flex-shrink: 0;
+}
+
+
+.rectTableRed {
+
+    border-radius: 14px;
+    background: #D4384B;
+    width: 110px;
+    height: 193px;
+    flex-shrink: 0;
+}
+
+.rectTableGreen {
+
+    border-radius: 14px;
+    background: #40B95F;
+    width: 110px;
+    height: 193px;
+    flex-shrink: 0;
+}
+
+.tableNr {
+
+    position: relative;
+    top: 66px;
+    left: 40px;
+    right: 0;
+    bottom: 0;
+    color: #FFF;
+    /* text-align: center; */
+    font-family: Manrope;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.noti {
+    color: var(--text-dark, #252723);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 48px;
+    position: absolute;
+    top: -10px;
+    right: -3px;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.notip {
+    position: absolute;
+    top: -13px;
+    left: 5px
+}
+
+.borderFade {
+    width: 8.428px;
+    height: 109.872px;
+    background: #fff;
+    position: absolute;
+    top: 95px;
+    right: -8px;
+}
+
+.addTBtn {
+
+    border-radius: 6px;
+    background: #D69657;
+    color: #fff;
+}
+
+.deleteTBtn {
+    border-radius: 6px;
+    background: #fff;
+    color: #D69657;
+    border: 1px solid #D69657
+}
