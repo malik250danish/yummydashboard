@@ -694,163 +694,34 @@
 
           <!-- Begin Page Content -->
           <div class="container-fluid mt-0 pt-2 py-5">
-            <div class="container mb-5">
-              <div class="d-flex justify-content-center">
-                <h2 class="text-center">Settings</h2>
-              </div>
-              <div class="my-2 d-flex justify-content-center">
-                <div class="container mt-4 px-5">
-                  <div class="accordContainer" id="accordion">
-                    <div class="card">
-                      <div class="cardHeader" id="headingOne">
-                        <h5 class="mb-0">
-                          <button
-                            class="btn btn-link"
-                            data-toggle="collapse"
-                            data-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne"
-                          >
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="./assets/images/profile-circle.png"
-                                alt=""
-                              />
-                              <p class="mt-3 mx-2 acctext">Profile</p>
-                            </div>
-                            <span class="chevron rotate"></span>
-                          </button>
-                        </h5>
-                      </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <div class="d-flex align-items-center">
+                  <div class="peofileImage position-relative">
+                    <img src="./assets/images/gp.png" alt="" />
 
-                      <div
-                        id="collapseOne"
-                        class="collapse show"
-                        aria-labelledby="headingOne"
-                        data-parent="#accordion"
-                      >
-                        <div class="card-body">
-                          <a href="./profile.html"
-                            ><p class="fw-bold fs-4">Profilepage</p></a
-                          >
-                        </div>
-                      </div>
+                    <div class="position-absolute changePhoto">
+                      <img src="./assets/images/change_photo.png" alt="" />
                     </div>
-
-                    <div class="card">
-                      <div class="cardHeader" id="headingTwo">
-                        <h5 class="mb-0">
-                          <button
-                            class="btn btn-link collapsed"
-                            data-toggle="collapse"
-                            data-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
+                  </div>
+                  <p class="proText">Kamilia Jench</p>
+                </div>
+                <div class="my-3">
+                  <div class="row">
+                    <div class="col-md-6 my-2">
+                      <div class="my-2 d-flex justify-content-between">
+                        <div class="mx-1">
+                          <label class="prLabel" for="form-label"
+                            >First Name</label
                           >
-                            <div class="d-flex align-items-center">
-                              <img src="./assets/images/Password.png" alt="" />
-                              <p class="mt-3 mx-2 acctext">Change Password</p>
-                            </div>
-                            <span class="chevron"></span>
-                          </button>
-                        </h5>
-                      </div>
-                      <div
-                        id="collapseTwo"
-                        class="collapse"
-                        aria-labelledby="headingTwo"
-                        data-parent="#accordion"
-                      >
-                        <div class="card-body">
-                          Content for Accordion Item #2
+                          <input class="form-control prInp" type="text" />
                         </div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <div class="cardHeader" id="headingThree">
-                        <h5 class="mb-0">
-                          <button
-                            class="btn btn-link collapsed"
-                            data-toggle="collapse"
-                            data-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree"
+                        <div class="mx-1">
+                          <label class="prLabel" for="form-label"
+                            >Surname</label
                           >
-                            <div class="d-flex align-items-center">
-                              <img src="./assets/images/card-pos.png" alt="" />
-                              <p class="mt-3 mx-2 acctext">Payments</p>
-                            </div>
-                            <span class="chevron"></span>
-                          </button>
-                        </h5>
-                      </div>
-                      <div
-                        id="collapseThree"
-                        class="collapse"
-                        aria-labelledby="headingThree"
-                        data-parent="#accordion"
-                      >
-                        <div class="card-body">
-                          Content for Accordion Item #3
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="cardHeader" id="headingFour">
-                        <h5 class="mb-0">
-                          <button
-                            class="btn btn-link collapsed"
-                            data-toggle="collapse"
-                            data-target="#collapseFour"
-                            aria-expanded="false"
-                            aria-controls="collapseFour"
-                          >
-                            <div class="d-flex align-items-center">
-                              <img src="./assets/images/bill.png" alt="" />
-                              <p class="mt-3 mx-2 acctext">Billing</p>
-                            </div>
-                            <span class="chevron"></span>
-                          </button>
-                        </h5>
-                      </div>
-                      <div
-                        id="collapseFour"
-                        class="collapse"
-                        aria-labelledby="headingFour"
-                        data-parent="#accordion"
-                      >
-                        <div class="card-body">
-                          Content for Accordion Item #3
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="cardHeader" id="headingFive">
-                        <h5 class="mb-0">
-                          <button
-                            class="btn btn-link collapsed"
-                            data-toggle="collapse"
-                            data-target="#collapseFive"
-                            aria-expanded="false"
-                            aria-controls="collapseFive"
-                          >
-                            <div class="d-flex align-items-center">
-                              <img src="./assets/images/invp.png" alt="" />
-                              <p class="mt-3 mx-2 acctext">Invoices</p>
-                            </div>
-                            <span class="chevron"></span>
-                          </button>
-                        </h5>
-                      </div>
-                      <div
-                        id="collapseFive"
-                        class="collapse"
-                        aria-labelledby="headingFive"
-                        data-parent="#accordion"
-                      >
-                        <div class="card-body">
-                          Content for Accordion Item #3
+                          <input class="form-control prInp" type="text" />
                         </div>
                       </div>
                     </div>
@@ -903,15 +774,5 @@
     ></script>
     <!-- datatable script -->
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var accordions = document.querySelectorAll("#accordion .cardHeader");
-        accordions.forEach(function (accordion) {
-          accordion.addEventListener("click", function () {
-            this.querySelector(".chevron").classList.toggle("rotate");
-          });
-        });
-      });
-    </script>
   </body>
 </html>
