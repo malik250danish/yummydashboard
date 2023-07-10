@@ -1016,3 +1016,82 @@ form.user .form-control-user {
     font-weight: 400;
     line-height: 24px;
 }
+
+.btnActive {
+    background-color: #fff !important;
+}
+
+.ordButton {
+    text-wrap: nowrap;
+}
+
+.orderNoti {
+    display: flex;
+    padding: 2px 11px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 33px;
+    background: #E0852C;
+    color: #fff;
+    font-size: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.smText {
+    color: #767676;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Manrope;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.someText {
+    color: #252723;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.bgred {
+    border-radius: 8px;
+    background: #E24919;
+}
+
+.bgt1 {
+    color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2px;
+}
+
+.bgt2 {
+    color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Manrope;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2px;
+}
+
+.mains {
+    border-bottom: 2px solid #F8F8F8 !important;
+    padding-top: 3px
+}
