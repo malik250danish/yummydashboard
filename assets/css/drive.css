@@ -1095,3 +1095,116 @@ form.user .form-control-user {
     border-bottom: 2px solid #F8F8F8 !important;
     padding-top: 3px
 }
+
+/* index page */
+.chartCard {
+    border-radius: 4px !important;
+    border: 1px solid #E2E2E2 !important;
+    cursor: pointer;
+}
+
+.chartCard:hover {
+    border-radius: 4px;
+    border: 1.4px solid #E16FA8 !important;
+    background: #FAE6F0;
+}
+
+.cp2 {
+    color: #2E2C34;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    /* 138.462% */
+    letter-spacing: -0.4px;
+}
+
+.cp1 {
+    color: #84818A;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    /* 150% */
+}
+
+.progress-bar {
+    border-radius: 4px !important;
+    background: #E16FA8;
+    height: 17px !important;
+
+}
+
+.progress {
+    border-radius: 4px !important;
+    background: rgba(225, 111, 168, 0.10);
+    height: 17px !important;
+
+}
+
+.pbf1 {
+    color: #1E1E1E;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    /* 112.5% */
+}
+
+.pbf2 {
+    color: #84818A;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    /* 150% */
+}
+
+.ft1 {
+    color: #D4D3D6;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    /* 112.5% */
+}
+
+.ft2 {
+    color: #1E1E1E;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    /* 112.5% */
+}
+
+.ft3 {
+    color: var(--grey, #84818A);
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 166.667% */
+}
+
+.sobtn {
+
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    border: 1px solid #E4E4E4 !important;
+    background: var(--white, #FFF) !important;
+
+
+}

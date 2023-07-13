@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="csrf-token"
+      content="LUEiBe8ZD9KPYNf3Iffsuxl3WaNSydPz6CnLLuBX"
+    />
+    <title>Admin - Dashboard</title>
+    <!-- data table style -->
+    <link
+      href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./assets/css/admin.css" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+       <link rel="stylesheet" href="./assets/css/table.css" />
+    <link rel="stylesheet" href="./assets/css/drive.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap  -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    /> -->
+    <style>
+          canvas {
+      display: block;
+      width: fit-content;
+      height: fit-content;
+      
+    }
+    .pt1{
+      color:  #2E2C34;
+
+/* Body/Caption/Semi Bold */
+font-family: Plus Jakarta Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 111.111% */
+    }
+
+    </style>
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bgSideBar sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="#"
+        >
+          <div class="sidebar-brand-text mx-3">
+            <img
+              class=""
+              src="./assets/images/dlogo.png"
+              alt=""
+              width="200px"
+            />
+          </div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active ml-4 dashcolor">
+          <a class="nav-link" href="">
+            <img src="./assets/images/dasl.png" alt="" />
+
+            <span>Dashboard</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+       <li class="nav-item ml-4">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#companyNav"
+            aria-expanded="true"
+            aria-controls="companyNav"
+          >
+            <span><img src="./assets/images/orderimg.png" alt="" /> </span>
+            <span class="sbfont">Orders</span>
+          </a>
+
+          <div
+            id="companyNav"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="./order2.html">All </a>
+              <a class="collapse-item" href="./editUser.html">Edit</a>
+              <a class="collapse-item" href="addUser.html">Add r</a>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item ml-4">
+          <a
+            class="nav-link collapsed"
+            href="./driver.html"
+            aria-expanded="true"
+            aria-controls="categoryNav"
+          >
+            <span>
+              <img src="./assets/images/Users.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont">Drivers</span>
+          </a>
+        </li>
+
+       <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="./Restaurant.html">
+            <span
+              ><svg
+                width="19"
+                height="22"
+                viewBox="0 0 19 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.8667 3H2.13333C1.50741 3 1 3.44772 1 4V20C1 20.5523 1.50741 21 2.13333 21H16.8667C17.4926 21 18 20.5523 18 20V4C18 3.44772 17.4926 3 16.8667 3Z"
+                  stroke="white"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.10013 1V4M12.9001 1V4M4.9668 8.5H14.0335M4.9668 12.5H11.7668M4.9668 16.5H9.50013"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span>
+              <img src="./assets/images/resticon.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont"> Restaurants</span>
+          </a>
+        </li>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="./coupon.html">
+            <span
+              ><svg
+                width="19"
+                height="22"
+                viewBox="0 0 19 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.8667 3H2.13333C1.50741 3 1 3.44772 1 4V20C1 20.5523 1.50741 21 2.13333 21H16.8667C17.4926 21 18 20.5523 18 20V4C18 3.44772 17.4926 3 16.8667 3Z"
+                  stroke="white"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.10013 1V4M12.9001 1V4M4.9668 8.5H14.0335M4.9668 12.5H11.7668M4.9668 16.5H9.50013"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span>
+              <img src="./assets/images/resticon.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont"> Coupons and loyality</span>
+          </a>
+        </li>
+          <div
+            id="subCategoryNav"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a
+                class="collapse-item"
+                href="https://techrepublica.com/playground/auth/sub-category"
+                >All</a
+              >
+              <a
+                class="collapse-item"
+                href="https://techrepublica.com/playground/auth/sub-category/create"
+                >Add</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="./faremanagenent.html"
+
+          >
+            <span
+              ><svg
+                width="18"
+                height="15"
+                viewBox="0 0 18 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9375 11.25C12.7883 11.25 12.6452 11.3158 12.5398 11.4331C12.4343 11.5503 12.375 11.7092 12.375 11.875C12.375 12.0408 12.4343 12.1997 12.5398 12.3169C12.6452 12.4342 12.7883 12.5 12.9375 12.5H15.1875C15.3367 12.5 15.4798 12.4342 15.5852 12.3169C15.6907 12.1997 15.75 12.0408 15.75 11.875C15.75 11.7092 15.6907 11.5503 15.5852 11.4331C15.4798 11.3158 15.3367 11.25 15.1875 11.25H12.9375ZM0 3.4375C0 2.52582 0.325948 1.65148 0.906138 1.00682C1.48633 0.362164 2.27324 0 3.09375 0H14.9062C15.7268 0 16.5137 0.362164 17.0939 1.00682C17.6741 1.65148 18 2.52582 18 3.4375V11.5625C18 12.4742 17.6741 13.3485 17.0939 13.9932C16.5137 14.6378 15.7268 15 14.9062 15H3.09375C2.27324 15 1.48633 14.6378 0.906138 13.9932C0.325948 13.3485 0 12.4742 0 11.5625V3.4375ZM3.09375 1.25C2.5716 1.25 2.07085 1.48047 1.70163 1.8907C1.33242 2.30094 1.125 2.85734 1.125 3.4375V5H16.875V3.4375C16.875 2.85734 16.6676 2.30094 16.2984 1.8907C15.9292 1.48047 15.4284 1.25 14.9062 1.25H3.09375ZM16.875 6.25H1.125V11.5625C1.125 12.77 2.007 13.75 3.09375 13.75H14.9062C15.4284 13.75 15.9292 13.5195 16.2984 13.1093C16.6676 12.6991 16.875 12.1427 16.875 11.5625V6.25Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span>
+              <img src="./assets/images/dollaricon.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont"> Fare Management</span>
+          </a>
+          <div
+            id="subCategoryChildNav"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="">All</a>
+              <a class="collapse-item" href="">Add</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#subCategoryChildNav"
+            aria-expanded="true"
+            aria-controls="subCategoryChildNav"
+          >
+            <span
+              ><svg
+                width="18"
+                height="15"
+                viewBox="0 0 18 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9375 11.25C12.7883 11.25 12.6452 11.3158 12.5398 11.4331C12.4343 11.5503 12.375 11.7092 12.375 11.875C12.375 12.0408 12.4343 12.1997 12.5398 12.3169C12.6452 12.4342 12.7883 12.5 12.9375 12.5H15.1875C15.3367 12.5 15.4798 12.4342 15.5852 12.3169C15.6907 12.1997 15.75 12.0408 15.75 11.875C15.75 11.7092 15.6907 11.5503 15.5852 11.4331C15.4798 11.3158 15.3367 11.25 15.1875 11.25H12.9375ZM0 3.4375C0 2.52582 0.325948 1.65148 0.906138 1.00682C1.48633 0.362164 2.27324 0 3.09375 0H14.9062C15.7268 0 16.5137 0.362164 17.0939 1.00682C17.6741 1.65148 18 2.52582 18 3.4375V11.5625C18 12.4742 17.6741 13.3485 17.0939 13.9932C16.5137 14.6378 15.7268 15 14.9062 15H3.09375C2.27324 15 1.48633 14.6378 0.906138 13.9932C0.325948 13.3485 0 12.4742 0 11.5625V3.4375ZM3.09375 1.25C2.5716 1.25 2.07085 1.48047 1.70163 1.8907C1.33242 2.30094 1.125 2.85734 1.125 3.4375V5H16.875V3.4375C16.875 2.85734 16.6676 2.30094 16.2984 1.8907C15.9292 1.48047 15.4284 1.25 14.9062 1.25H3.09375ZM16.875 6.25H1.125V11.5625C1.125 12.77 2.007 13.75 3.09375 13.75H14.9062C15.4284 13.75 15.9292 13.5195 16.2984 13.1093C16.6676 12.6991 16.875 12.1427 16.875 11.5625V6.25Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span>
+              <img src="./assets/images/tableicon.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont"> Table Management</span>
+          </a>
+          <div
+            id="subCategoryChildNav"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="">All</a>
+              <a class="collapse-item" href="">Add</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="./stockmanagement.html"
+           
+          >
+            <span
+              ><svg
+                width="18"
+                height="15"
+                viewBox="0 0 18 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9375 11.25C12.7883 11.25 12.6452 11.3158 12.5398 11.4331C12.4343 11.5503 12.375 11.7092 12.375 11.875C12.375 12.0408 12.4343 12.1997 12.5398 12.3169C12.6452 12.4342 12.7883 12.5 12.9375 12.5H15.1875C15.3367 12.5 15.4798 12.4342 15.5852 12.3169C15.6907 12.1997 15.75 12.0408 15.75 11.875C15.75 11.7092 15.6907 11.5503 15.5852 11.4331C15.4798 11.3158 15.3367 11.25 15.1875 11.25H12.9375ZM0 3.4375C0 2.52582 0.325948 1.65148 0.906138 1.00682C1.48633 0.362164 2.27324 0 3.09375 0H14.9062C15.7268 0 16.5137 0.362164 17.0939 1.00682C17.6741 1.65148 18 2.52582 18 3.4375V11.5625C18 12.4742 17.6741 13.3485 17.0939 13.9932C16.5137 14.6378 15.7268 15 14.9062 15H3.09375C2.27324 15 1.48633 14.6378 0.906138 13.9932C0.325948 13.3485 0 12.4742 0 11.5625V3.4375ZM3.09375 1.25C2.5716 1.25 2.07085 1.48047 1.70163 1.8907C1.33242 2.30094 1.125 2.85734 1.125 3.4375V5H16.875V3.4375C16.875 2.85734 16.6676 2.30094 16.2984 1.8907C15.9292 1.48047 15.4284 1.25 14.9062 1.25H3.09375ZM16.875 6.25H1.125V11.5625C1.125 12.77 2.007 13.75 3.09375 13.75H14.9062C15.4284 13.75 15.9292 13.5195 16.2984 13.1093C16.6676 12.6991 16.875 12.1427 16.875 11.5625V6.25Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span>
+              <img src="./assets/images/noteicon.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont"> Stock Management</span>
+          </a>
+         
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#subCategoryChildNav"
+            aria-expanded="true"
+            aria-controls="subCategoryChildNav"
+          >
+            <span
+              ><svg
+                width="18"
+                height="15"
+                viewBox="0 0 18 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9375 11.25C12.7883 11.25 12.6452 11.3158 12.5398 11.4331C12.4343 11.5503 12.375 11.7092 12.375 11.875C12.375 12.0408 12.4343 12.1997 12.5398 12.3169C12.6452 12.4342 12.7883 12.5 12.9375 12.5H15.1875C15.3367 12.5 15.4798 12.4342 15.5852 12.3169C15.6907 12.1997 15.75 12.0408 15.75 11.875C15.75 11.7092 15.6907 11.5503 15.5852 11.4331C15.4798 11.3158 15.3367 11.25 15.1875 11.25H12.9375ZM0 3.4375C0 2.52582 0.325948 1.65148 0.906138 1.00682C1.48633 0.362164 2.27324 0 3.09375 0H14.9062C15.7268 0 16.5137 0.362164 17.0939 1.00682C17.6741 1.65148 18 2.52582 18 3.4375V11.5625C18 12.4742 17.6741 13.3485 17.0939 13.9932C16.5137 14.6378 15.7268 15 14.9062 15H3.09375C2.27324 15 1.48633 14.6378 0.906138 13.9932C0.325948 13.3485 0 12.4742 0 11.5625V3.4375ZM3.09375 1.25C2.5716 1.25 2.07085 1.48047 1.70163 1.8907C1.33242 2.30094 1.125 2.85734 1.125 3.4375V5H16.875V3.4375C16.875 2.85734 16.6676 2.30094 16.2984 1.8907C15.9292 1.48047 15.4284 1.25 14.9062 1.25H3.09375ZM16.875 6.25H1.125V11.5625C1.125 12.77 2.007 13.75 3.09375 13.75H14.9062C15.4284 13.75 15.9292 13.5195 16.2984 13.1093C16.6676 12.6991 16.875 12.1427 16.875 11.5625V6.25Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span>
+              <img src="./assets/images/menuicon.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont"> Menu</span>
+          </a>
+          <div
+            id="subCategoryChildNav"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="">All</a>
+              <a class="collapse-item" href="">Add</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#subCategoryChildNav"
+            aria-expanded="true"
+            aria-controls="subCategoryChildNav"
+          >
+            <span
+              ><svg
+                width="18"
+                height="15"
+                viewBox="0 0 18 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9375 11.25C12.7883 11.25 12.6452 11.3158 12.5398 11.4331C12.4343 11.5503 12.375 11.7092 12.375 11.875C12.375 12.0408 12.4343 12.1997 12.5398 12.3169C12.6452 12.4342 12.7883 12.5 12.9375 12.5H15.1875C15.3367 12.5 15.4798 12.4342 15.5852 12.3169C15.6907 12.1997 15.75 12.0408 15.75 11.875C15.75 11.7092 15.6907 11.5503 15.5852 11.4331C15.4798 11.3158 15.3367 11.25 15.1875 11.25H12.9375ZM0 3.4375C0 2.52582 0.325948 1.65148 0.906138 1.00682C1.48633 0.362164 2.27324 0 3.09375 0H14.9062C15.7268 0 16.5137 0.362164 17.0939 1.00682C17.6741 1.65148 18 2.52582 18 3.4375V11.5625C18 12.4742 17.6741 13.3485 17.0939 13.9932C16.5137 14.6378 15.7268 15 14.9062 15H3.09375C2.27324 15 1.48633 14.6378 0.906138 13.9932C0.325948 13.3485 0 12.4742 0 11.5625V3.4375ZM3.09375 1.25C2.5716 1.25 2.07085 1.48047 1.70163 1.8907C1.33242 2.30094 1.125 2.85734 1.125 3.4375V5H16.875V3.4375C16.875 2.85734 16.6676 2.30094 16.2984 1.8907C15.9292 1.48047 15.4284 1.25 14.9062 1.25H3.09375ZM16.875 6.25H1.125V11.5625C1.125 12.77 2.007 13.75 3.09375 13.75H14.9062C15.4284 13.75 15.9292 13.5195 16.2984 13.1093C16.6676 12.6991 16.875 12.1427 16.875 11.5625V6.25Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span>
+              <img src="./assets/images/Settingsicon.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont"> Settings</span>
+          </a>
+          <div
+            id="subCategoryChildNav"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="">All</a>
+              <a class="collapse-item" href="">Add</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#subCategoryChildNav"
+            aria-expanded="true"
+            aria-controls="subCategoryChildNav"
+          >
+            <span
+              ><svg
+                width="18"
+                height="15"
+                viewBox="0 0 18 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9375 11.25C12.7883 11.25 12.6452 11.3158 12.5398 11.4331C12.4343 11.5503 12.375 11.7092 12.375 11.875C12.375 12.0408 12.4343 12.1997 12.5398 12.3169C12.6452 12.4342 12.7883 12.5 12.9375 12.5H15.1875C15.3367 12.5 15.4798 12.4342 15.5852 12.3169C15.6907 12.1997 15.75 12.0408 15.75 11.875C15.75 11.7092 15.6907 11.5503 15.5852 11.4331C15.4798 11.3158 15.3367 11.25 15.1875 11.25H12.9375ZM0 3.4375C0 2.52582 0.325948 1.65148 0.906138 1.00682C1.48633 0.362164 2.27324 0 3.09375 0H14.9062C15.7268 0 16.5137 0.362164 17.0939 1.00682C17.6741 1.65148 18 2.52582 18 3.4375V11.5625C18 12.4742 17.6741 13.3485 17.0939 13.9932C16.5137 14.6378 15.7268 15 14.9062 15H3.09375C2.27324 15 1.48633 14.6378 0.906138 13.9932C0.325948 13.3485 0 12.4742 0 11.5625V3.4375ZM3.09375 1.25C2.5716 1.25 2.07085 1.48047 1.70163 1.8907C1.33242 2.30094 1.125 2.85734 1.125 3.4375V5H16.875V3.4375C16.875 2.85734 16.6676 2.30094 16.2984 1.8907C15.9292 1.48047 15.4284 1.25 14.9062 1.25H3.09375ZM16.875 6.25H1.125V11.5625C1.125 12.77 2.007 13.75 3.09375 13.75H14.9062C15.4284 13.75 15.9292 13.5195 16.2984 13.1093C16.6676 12.6991 16.875 12.1427 16.875 11.5625V6.25Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span>
+              <img src="./assets/images/flashicon.png" alt="" width="25px" />
+            </span>
+            <span class="sbfont"> Integrations</span>
+          </a>
+          <div
+            id="subCategoryChildNav"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="">All</a>
+              <a class="collapse-item" href="">Add</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <div class="py-4 navvTop d-flex justify-content-between">
+            <div></div>
+            <div
+              class="ms-4 ps-5 d-flex justify-content-between align-items-center topBox"
+            >
+              <div
+                class="topLinkBox d-flex justify-content-between align-items-center"
+              >
+                <button class="btn">
+                  <img src="./assets/images/More.png" alt="" />
+                </button>
+                <img
+                  src="./assets/images/lock.png"
+                  alt=""
+                  width="15px"
+                  height="15px"
+                />
+                <input
+                  class="form-control inpLink w-100"
+                  type="text"
+                  placeholder="https://yummy.com"
+                />
+              </div>
+            </div>
+            <div class="btnsSection">
+              <img class="mx-2" src="./assets/images/d.png" alt="" />
+              <img class="mx-2" src="./assets/images/exp.png" alt="" />
+              <img class="mx-2" src="./assets/images/plus.png" alt="" />
+              <img class="mx-2" src="./assets/images/sh.png" alt="" />
+            </div>
+          </div>
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand bgNavBar topbar mb-4 static-top shadow"
+          >
+            <!-- left navbar side -->
+            <div class="d-flex w-100 align-items-center">
+              <!-- Sidebar Toggle (Topbar) -->
+              <div class="d-flex align-items-center">
+                <button
+                  id="sidebarToggleTop"
+                  class="btn mr-3 ms-0 d-flex align-items-center"
+                >
+                  <img src="./assets/images/stoggle.png" alt="" />
+                </button>
+                <!-- dropdown -->
+                <div class="">
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle ddt"
+                      type="button"
+                      id="dropdownMenuButton2"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Tablica
+                    </button>
+                    <ul
+                      class="dropdown-menu dropdown-menu-dark"
+                      aria-labelledby="dropdownMenuButton2"
+                    >
+                      <li>
+                        <a class="dropdown-item active" href="#">Action</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 d-flex justify-content-center">
+                <div
+                  style="border-radius: 10px !important"
+                  class="searchBox d-flex justify-content-between align-items-center"
+                >
+                  <i class="fa fa-search mx-4"></i>
+                  <input
+                    type="text"
+                    class="form-control mx-2 inpSearch"
+                    placeholder="serach"
+                  />
+                  <button class="btn">
+                    <img src="./assets/images/Filter2.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+              <li class="nav-item dropdown no-arrow d-sm-none">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="searchDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-search fa-fw"></i>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div
+                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                  aria-labelledby="searchDropdown"
+                >
+                  <form class="form-inline mr-auto w-100 navbar-search">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0 small"
+                        placeholder="Search for..."
+                        aria-label="Search"
+                        aria-describedby="basic-addon2"
+                      />
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="alertsDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span
+                    ><svg
+                      width="13"
+                      height="15"
+                      viewBox="0 0 13 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.10993 13.3298C5.47132 13.7323 5.93527 13.9535 6.41667 13.9535H6.41737C6.90086 13.9535 7.3669 13.7323 7.729 13.3291C7.92295 13.1149 8.25365 13.0974 8.46783 13.2907C8.68272 13.484 8.70016 13.8153 8.5069 14.0295C7.94318 14.6553 7.20155 15 6.41737 15H6.41597C5.63388 14.9993 4.89365 14.6547 4.33202 14.0288C4.13876 13.8147 4.1562 13.4833 4.37109 13.2907C4.58597 13.0967 4.91667 13.1142 5.10993 13.3298ZM6.45141 0C9.55258 0 11.6358 2.41535 11.6358 4.67093C11.6358 5.83116 11.931 6.32302 12.2442 6.84488C12.554 7.35977 12.9049 7.94442 12.9049 9.04953C12.6614 11.873 9.71374 12.1033 6.45141 12.1033C3.18909 12.1033 0.240716 11.873 9.23465e-06 9.09419C-0.00207447 7.94442 0.348856 7.35977 0.658623 6.84488L0.76798 6.66081C1.03723 6.19804 1.267 5.69466 1.267 4.67093C1.267 2.41535 3.35025 0 6.45141 0ZM6.45141 1.04651C4.01304 1.04651 2.31351 2.95674 2.31351 4.67093C2.31351 6.1214 1.91095 6.79186 1.55513 7.38349C1.26979 7.8586 1.04444 8.23395 1.04444 9.04953C1.16095 10.3653 2.02955 11.0567 6.45141 11.0567C10.8489 11.0567 11.7447 10.3347 11.8605 9.00419C11.8584 8.23395 11.633 7.8586 11.3477 7.38349C10.9919 6.79186 10.5893 6.1214 10.5893 4.67093C10.5893 2.95674 8.88979 1.04651 6.45141 1.04651Z"
+                        fill="#6B7181"
+                      />
+                    </svg>
+                  </span>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter">0</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div
+                  class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <h6 class="dropdown-header bg-danger">Alerts Center</h6>
+                  <a
+                    class="dropdown-item text-center small text-gray-500"
+                    href="#"
+                    >Show All Alerts</a
+                  >
+                </div>
+              </li>
+
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="img-profil rounded-circle"
+                    src="./assets/images/user.png"
+                  />
+                </a>
+                <!-- Dropdown - User Information -->
+                <div
+                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="userDropdown"
+                >
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#logoutModal"
+                  >
+                    <i
+                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                    ></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Logout Modal-->
+          <div
+            class="modal fade"
+            id="logoutModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Ready to Leave?
+                  </h5>
+                  <button
+                    class="close"
+                    type="button"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Select "Logout" below if you are ready to end your current
+                  session.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <form action="#" method="post">
+                    <input
+                      type="hidden"
+                      name="_token"
+                      value="LUEiBe8ZD9KPYNf3Iffsuxl3WaNSydPz6CnLLuBX"
+                    />
+                    <input
+                      type="submit"
+                      value="Logout"
+                      class="btn btn-primary"
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid mt-0">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <p class="mainHeading text-dark">Magazyn</p>
+              <div>
+                
+              </div>
+            </div>
+  
+            <!-- Content Row -->
+            <div class="container-fluid">
+              <div class="row my-2 py-3 rowDetails">
+                <div class="col-md-2 my-2 borderCol d-flex justify-content-center">
+                  <div>
+                    <p class="tabFont">Total Items</p>
+                    <p class="fnum">2542</p>
+                  </div>
+                </div>
+                <div class="col-md-2 my-2 borderCol d-flex justify-content-center">
+                  <div>
+                    <p class="tabFont">Total Catagories</p>
+                    <p class="fnum">102</p>
+                  </div>
+                </div>
+                <div class="col-md-4 my-2 borderCol d-flex justify-content-center">
+                  <div>
+                    <p class="tabFont">Total Value</p>
+                    <p class="fnum">$5,500000</p>
+                  </div>
+                </div>
+                <div class="col-md-2 my-2 d-flex justify-content-center">
+                  <div>
+                    <p class="tabFont">In Order</p>
+                    <p class="fnum">99</p>
+                  </div>
+                </div>
+                <div class="col-md-2 my-2 d-flex justify-content-center">
+                  <div>
+                    <p class="tabFont">Not in stock</p>
+                    <p class="fnum">4</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row ">
+               <div class="row">
+                <div class="col-md-8 my-2">
+                  <div class="card">
+                    <canvas id="lineChart"></canvas>
+
+                  </div>
+                </div>
+                <div class="col-md-4 my-2">
+                  <div class="card">
+                    <div class="d-flex">
+                     <div class="d-flex flex-column">
+                      <p class="mx-2 pt1">Zamówienia</p>
+                      <small>Kliknij w graf, aby zobaczyć więcej</small>
+                     </div>
+                      <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.00004 7.33325C7.82323 7.33325 7.65366 7.40349 7.52864 7.52851C7.40362 7.65354 7.33338 7.82311 7.33338 7.99992V10.6666C7.33338 10.8434 7.40362 11.013 7.52864 11.138C7.65366 11.263 7.82323 11.3333 8.00004 11.3333C8.17686 11.3333 8.34642 11.263 8.47145 11.138C8.59647 11.013 8.66671 10.8434 8.66671 10.6666V7.99992C8.66671 7.82311 8.59647 7.65354 8.47145 7.52851C8.34642 7.40349 8.17686 7.33325 8.00004 7.33325ZM8.25338 4.71992C8.09107 4.65324 7.90902 4.65324 7.74671 4.71992C7.66488 4.75165 7.59011 4.79922 7.52671 4.85992C7.46782 4.92472 7.42047 4.99913 7.38671 5.07992C7.34939 5.15904 7.33112 5.2458 7.33338 5.33325C7.33287 5.42099 7.34969 5.50796 7.38286 5.58919C7.41604 5.67041 7.46492 5.74429 7.52671 5.80659C7.59151 5.86547 7.66592 5.91282 7.74671 5.94659C7.84771 5.98808 7.95735 6.00413 8.06601 5.99333C8.17466 5.98252 8.279 5.9452 8.36985 5.88463C8.4607 5.82406 8.53529 5.74211 8.58705 5.64597C8.63881 5.54982 8.66617 5.44244 8.66671 5.33325C8.66426 5.15674 8.5952 4.98767 8.47338 4.85992C8.40998 4.79922 8.33521 4.75165 8.25338 4.71992ZM8.00004 1.33325C6.6815 1.33325 5.39257 1.72425 4.29624 2.45679C3.19991 3.18933 2.34543 4.23052 1.84085 5.4487C1.33626 6.66687 1.20424 8.00731 1.46148 9.30052C1.71871 10.5937 2.35365 11.7816 3.286 12.714C4.21835 13.6463 5.40624 14.2813 6.69944 14.5385C7.99265 14.7957 9.33309 14.6637 10.5513 14.1591C11.7694 13.6545 12.8106 12.8 13.5432 11.7037C14.2757 10.6074 14.6667 9.31846 14.6667 7.99992C14.6667 7.12444 14.4943 6.25753 14.1592 5.4487C13.8242 4.63986 13.3331 3.90493 12.7141 3.28587C12.095 2.66682 11.3601 2.17575 10.5513 1.84072C9.74243 1.50569 8.87552 1.33325 8.00004 1.33325ZM8.00004 13.3333C6.94521 13.3333 5.91406 13.0205 5.037 12.4344C4.15994 11.8484 3.47635 11.0154 3.07269 10.0409C2.66902 9.06636 2.5634 7.994 2.76919 6.95944C2.97498 5.92487 3.48293 4.97456 4.22881 4.22868C4.97469 3.4828 5.925 2.97485 6.95956 2.76906C7.99413 2.56328 9.06648 2.66889 10.041 3.07256C11.0156 3.47623 11.8485 4.15982 12.4345 5.03688C13.0206 5.91394 13.3334 6.94509 13.3334 7.99992C13.3334 9.41441 12.7715 10.771 11.7713 11.7712C10.7711 12.7713 9.41453 13.3333 8.00004 13.3333Z" fill="#84818A"/>
+                        </svg>
+                        </span>
+                    </div>
+                    <canvas id="doughnutChart"></canvas>
+                    <hr>
+                    <div class="d-flex">
+                      <span class="mx-2"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 10.5H2.5V4.5H0.5V10.5ZM11.5 5C11.5 4.45 11.05 4 10.5 4H7.345L7.82 1.715L7.835 1.555C7.835 1.35 7.75 1.16 7.615 1.025L7.085 0.5L3.795 3.795C3.61 3.975 3.5 4.225 3.5 4.5V9.5C3.5 10.05 3.95 10.5 4.5 10.5H9C9.415 10.5 9.77 10.25 9.92 9.89L11.43 6.365C11.475 6.25 11.5 6.13 11.5 6V5Z" fill="#20C9AC"/>
+                        </svg>
+                        </span>
+                      <p>Restauracja w Krakowie generuje najwięcej zamówień.</p>
+                    </div>
+                  </div>
+                </div>
+               </div>
+              </div>
+              <div class="row my-2">
+                <div class="col-md-6 my-2">
+                 <div class="card p-2">
+                  <div class="d-flex flex-column">
+                    <p class="mx-2 pt1">Raporty</p>
+                    <small>Kliknij w boxy, aby zmienić graf</small>
+                   </div>
+                  <div class="row my-2">
+                    <div class="col-md-4 my-2">
+                      <div class="card chartCard">
+                             <div>
+                              <div class="my-2">
+                                <p class="cp1">Klienci</p>
+                                <p class="cp2">24.3K</p>
+                              </div>
+                             </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 my-2">
+                      <div class="card chartCard">
+                        <div>
+                         <div class="my-2">
+                           <p class="cp1">Produkty</p>
+                           <p class="cp2">1.4K</p>
+                         </div>
+                        </div>
+                 </div>
+                    </div>
+                    <div class="col-md-4 my-2">
+                      <div class="card chartCard">
+                        <div>
+                         <div class="my-2">
+                           <p class="cp1">Obrót</p>
+                           <p class="cp2">260.3K</p>
+                         </div>
+                        </div>
+                 </div>
+                    </div>
+                  </div>
+                  <canvas id="myChart"></canvas>
+                 </div>
+                </div>
+                
+                <div class="col-md-6 my-2">
+                  <div class="card">
+                    <div class="card1 px-2">
+                        
+                      
+                      
+                        <div class="row my-2">
+                            <div class="col-md-3 d-flex">
+                                <span>
+                                    <img src="/assets/images/website.png" alt="website">
+        
+                                </span>
+                                <div class="ms-2">
+                                    <p class="pbf1">Website</p>
+                                    <p class="pbf2 mt-0"> Research</p>
+                                </div>
+                            </div>
+                            <div class="my-2 col-md-7">
+                                <div>
+                                    <div class="progress" style="height:6px">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 25%; border-radius: 10px; height:6px" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="d-flex">
+                                   
+                                    <p class="pa4 mx-2 fw-bold mt-1">25%</p>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-md-3 d-flex">
+                                <span>
+                                    <img src="/assets/images/phone.png" alt="website">
+        
+                                </span>
+                                <div class="ms-2">
+                                    <p class="pbf1">Phone</p>
+                                    <p class="pbf2 mt-0">Phone Research</p>
+                                </div>
+                            </div>
+                            <div class="my-2 col-md-7">
+                                <div>
+                                    <div class="progress" style="height:6px">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 25%; border-radius: 10px; height:6px" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="d-flex">
+                                  
+                                    <p class="pa6 mx-2 fw-bold mt-1">25%</p>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-md-3 d-flex">
+                                <span>
+                                    <img src="/assets/images/ubere.png" alt="website">
+        
+                                </span>
+                                <div class="ms-2">
+                                    <p class="pbf1">Uber Eats</p>
+                                    <p class="pbf2 mt-0"> Collaborator</p>
+                                </div>
+                            </div>
+                            <div class="my-2 col-md-7">
+                                <div>
+                                    <div class="progress" style="height:6px">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 25%; border-radius: 10px; height:6px" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="d-flex">
+                                   
+                                    <p class="pa4 mx-2 fw-bold mt-1">25%</p>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-md-3 d-flex">
+                                <span>
+                                    <img src="/assets/images/pypz.png" alt="website">
+        
+                                </span>
+                                <div class="ms-2">
+                                    <p class="pbf1">Pyszne.pl</p>
+                                    <p class="pbf2 mt-0">Collaborator</p>
+                                </div>
+                            </div>
+                            <div class="my-2 col-md-7">
+                                <div>
+                                    <div class="progress" style="height:6px">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 25%; border-radius: 10px; height:6px" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="d-flex">
+                                  
+                                    <p class="pa6 mx-2 fw-bold mt-1">25%</p>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col-md-5">
+                  <div class="card p-2">
+                    <div class="d-flex flex-column">
+                      <p class="mx-2 pt1">Zamówienia</p>
+                      <small>Kliknij w graf, aby zobaczyć więcej</small>
+                     </div>
+                     <div class="my-2">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <p class="ft1 mx-1">
+                              #1
+                            </p>
+                            <div>
+                              <p class="ft2">Pizza</p>
+                              <p class="ft3">ID: #FXZ-4567</p>
+                            </div>
+                        </div>
+                        <div>
+                          <p class="ft2">43440zł</p>
+                        </div>
+                      </div>
+                      <hr>
+                     </div>
+                     <div class="my-2">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <p class="ft1 mx-1">
+                              #1
+                            </p>
+                            <div>
+                              <p class="ft2">Pizza</p>
+                              <p class="ft3">ID: #FXZ-4567</p>
+                            </div>
+                        </div>
+                        <div>
+                          <p class="ft2">43440zł</p>
+                        </div>
+                      </div>
+                      <hr>
+                     </div>
+                     <div class="my-2">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <p class="ft1 mx-1">
+                              #1
+                            </p>
+                            <div>
+                              <p class="ft2">Pizza</p>
+                              <p class="ft3">ID: #FXZ-4567</p>
+                            </div>
+                        </div>
+                        <div>
+                          <p class="ft2">43440zł</p>
+                        </div>
+                      </div>
+                      <hr>
+                     </div>
+                     <div class="my-2">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <p class="ft1 mx-1">
+                              #1
+                            </p>
+                            <div>
+                              <p class="ft2">Pizza</p>
+                              <p class="ft3">ID: #FXZ-4567</p>
+                            </div>
+                        </div>
+                        <div>
+                          <p class="ft2">43440zł</p>
+                        </div>
+                      </div>
+                      <hr>
+                     </div>
+                     <div class="my-2">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <p class="ft1 mx-1">
+                              #1
+                            </p>
+                            <div>
+                              <p class="ft2">Pizza</p>
+                              <p class="ft3">ID: #FXZ-4567</p>
+                            </div>
+                        </div>
+                        <div>
+                          <p class="ft2">43440zł</p>
+                        </div>
+                      </div>
+                      <hr>
+                     </div>
+                     <div class="my-2">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <p class="ft1 mx-1">
+                              #1
+                            </p>
+                            <div>
+                              <p class="ft2">Pizza</p>
+                              <p class="ft3">ID: #FXZ-4567</p>
+                            </div>
+                        </div>
+                        <div>
+                          <p class="ft2">43440zł</p>
+                        </div>
+                      </div>
+                      <hr>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card p-2">
+                   <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column">
+                      <p class="mx-2 pt1">Zamówienia</p>
+                      <small>Kliknij w graf, aby zobaczyć więcej</small>
+                     </div>
+                     <button class="btn sobtn"><span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_1_990" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="17">
+                      <rect y="0.5" width="16" height="16" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_1_990)">
+                      <path d="M5.33333 12.5H2.66667C2.47778 12.5 2.31956 12.436 2.192 12.308C2.064 12.1804 2 12.0222 2 11.8333C2 11.6444 2.064 11.4862 2.192 11.3587C2.31956 11.2307 2.47778 11.1667 2.66667 11.1667H5.33333C5.52222 11.1667 5.68067 11.2307 5.80867 11.3587C5.93622 11.4862 6 11.6444 6 11.8333C6 12.0222 5.93622 12.1804 5.80867 12.308C5.68067 12.436 5.52222 12.5 5.33333 12.5ZM13.3333 5.83333H2.66667C2.47778 5.83333 2.31956 5.76956 2.192 5.642C2.064 5.514 2 5.35556 2 5.16667C2 4.97778 2.064 4.81933 2.192 4.69133C2.31956 4.56378 2.47778 4.5 2.66667 4.5H13.3333C13.5222 4.5 13.6804 4.56378 13.808 4.69133C13.936 4.81933 14 4.97778 14 5.16667C14 5.35556 13.936 5.514 13.808 5.642C13.6804 5.76956 13.5222 5.83333 13.3333 5.83333ZM9.33333 9.16667H2.66667C2.47778 9.16667 2.31956 9.10267 2.192 8.97467C2.064 8.84711 2 8.68889 2 8.5C2 8.31111 2.064 8.15267 2.192 8.02467C2.31956 7.89711 2.47778 7.83333 2.66667 7.83333H9.33333C9.52222 7.83333 9.68067 7.89711 9.80867 8.02467C9.93622 8.15267 10 8.31111 10 8.5C10 8.68889 9.93622 8.84711 9.80867 8.97467C9.68067 9.10267 9.52222 9.16667 9.33333 9.16667Z" fill="#858585"/>
+                      </g>
+                      </svg>
+                      </span> Sortuj</button>
+                   </div>
+                 
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://techrepublica.com/playground/dashboard/vendor/jquery/jquery.min.js"></script>
+    <script src="https://techrepublica.com/playground/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="https://techrepublica.com/playground/dashboard/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="https://techrepublica.com/playground/dashboard/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="https://techrepublica.com/playground/dashboard/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="https://techrepublica.com/playground/dashboard/js/demo/chart-area-demo.js"></script>
+    <script src="https://techrepublica.com/playground/dashboard/js/demo/chart-pie-demo.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="https://techrepublica.com/playground/dashboard/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="https://techrepublica.com/playground/dashboard/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="https://techrepublica.com/playground/dashboard/js/demo/datatables-demo.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <!-- datatable script -->
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <!-- chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Data
+      const dates = ['23-May', '5-May', '9-May', '12-May', '15-May', '17-May', '22-May', '26-May'];
+      const obecnyData = [0, 50000, 100000, 150000, 200000, 150000, 100000, 50000];
+      const poprzedniData = [0, 30000, 80000, 120000, 180000, 140000, 90000, 60000];
+  
+      // Create the chart
+      const cta = document.getElementById('lineChart').getContext('2d');
+      const lineChart = new Chart(cta, {
+        type: 'line',
+        data: {
+          labels: dates,
+          datasets: [{
+            label: 'Obecny',
+            data: obecnyData,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 6
+          }, {
+            label: 'Poprzedni',
+            data: poprzedniData,
+            backgroundColor: 'rgba(192, 75, 75, 0.2)',
+            borderColor: 'rgba(192, 75, 75, 1)',
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 6
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Date'
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Value'
+              },
+              beginAtZero: true,
+              max: 200000,
+              stepSize: 50000
+            }
+          }
+        }
+      });
+      // dougnut chart
+       // Data
+    // Data
+    const labels = ['Zakończone', 'W trakcie', 'Anulowane'];
+    const data = [30, 50, 20];
+    const colors = ['#8CE382', '#FEB010', '#FC3400'];
+
+    // Create the chart
+    const ctp = document.getElementById('doughnutChart').getContext('2d');
+    const doughnutChart = new Chart(ctp, {
+      type: 'doughnut',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: data,
+          backgroundColor: colors
+        }]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          position: 'bottom'
+        }
+      }
+    });
+    // line chart
+    const cti= document.getElementById('myChart').getContext('2d');
+    const chart = new Chart(cti, {
+      type: 'line',
+      data: {
+        labels: ['Maj', 'Cze', 'Lip', 'SieWrz', 'Paz', 'Lis'],
+        datasets: [{
+          label: 'My Data',
+          data: [0, 5, 8, 10, 20],
+          borderColor: '#E16FA8',
+          backgroundColor: 'rgba(225, 111, 168, 0.10)',
+        }]
+      },
+      options: {
+        title: {
+          text: 'My Line Chart'
+        },
+        xaxis: {
+          title: 'Months'
+        },
+        yaxis: {
+          title: 'Number of Visitors'
+        }
+      }
+    });
+    </script>
+  </body>
+</html>
