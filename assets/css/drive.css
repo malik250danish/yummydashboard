@@ -1210,25 +1210,43 @@ form.user .form-control-user {
 }
 
 /* css of menue page ---------------- */
-.writeicon{
+.writeicon {
     width: 30px !important;
 }
-.hot{
-    text-wrap:nowrap;
-}
-.form-check-input[type="radio"]::before {
-    width: 8rem !important; /* Set the desired width */
-    height: 8rem !important; /* Set the desired height */
-  }
-  .nameclr{
-    color:  #767676 !important;
-font-family: Manrope;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-/* line-height: 48px; */
-  }
-  /* Custom CSS to change the default color of radio input */
- /* Custom CSS to change radio button color on click */
 
- 
+.hot {
+    text-wrap: nowrap;
+}
+
+.form-check-input[type="radio"]::before {
+    width: 8rem !important;
+    /* Set the desired width */
+    height: 8rem !important;
+    /* Set the desired height */
+}
+
+.nameclr {
+    color: #767676 !important;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    /* line-height: 48px; */
+}
+
+/* Custom CSS to change the default color of radio input */
+/* Custom CSS to change radio button color on click */
+.nav-item:hover {
+    border-radius: 4px;
+
+    background: #F3ECF0;
+    color: #894567 !important;
+
+}
+
+.navActive {
+    border-radius: 4px;
+
+    background: #F3ECF0;
+    color: #894567 !important;
+}
